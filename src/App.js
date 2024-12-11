@@ -1,24 +1,36 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+
+import { Routes, Route, Navigate } from "react-router-dom";
+
+import LoginForm from "./components/login";
+import MovieForm from "./components/movieForm";
+import Movies from "./components/movies";
+import Customers from "./components/customers";
+import Rentals from "./components/rentals";
+import PageNotFound from "./components/notFound";
+import NavBar from "./components/navBar";
+import RegisterForm from "./components/register";
+
+import "./App.css";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <React.Fragment>
+      <NavBar />
+      <main className="container">
+        <Routes>
+          <Route path="/login" element={<LoginForm />}></Route>
+
+          <Route path="/movies/:id" element={<MovieForm />}></Route>
+          <Route path="/movies" element={<Movies />}></Route>
+          <Route path="/customers" element={<Customers />}></Route>
+          <Route path="/rentals" element={<Rentals />}></Route>
+          <Route path="/register" element={<RegisterForm />}></Route>
+          <Route path="*" element={<PageNotFound />}></Route>
+          <Route path="/" element={<Navigate to="/movies" />} />
+        </Routes>
+      </main>
+    </React.Fragment>
   );
 }
 
