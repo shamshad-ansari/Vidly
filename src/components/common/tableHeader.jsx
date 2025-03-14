@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 //colums
 //sortColumn
-//omSort
+//onSort
 
 class TableHeader extends Component {
   raiseSort = (path) => {
