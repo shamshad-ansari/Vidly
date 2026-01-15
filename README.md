@@ -4,7 +4,7 @@ Vidly is a React-based movie rental management application. It allows users to b
 
 ## 🎬 Project Demo
 
-![Project Demo](https://github.com/shamshad-ansari/Vidly/main/asset/demo.gif)
+![Project Demo](https://raw.githubusercontent.com/shamshad-ansari/Vidly/main/assets/demo.gif)
 
 <!-- To add a project demo GIF or screenshot:
 1. Record your application using a screen recorder (e.g., OBS Studio, ShareX, or LICEcap)
